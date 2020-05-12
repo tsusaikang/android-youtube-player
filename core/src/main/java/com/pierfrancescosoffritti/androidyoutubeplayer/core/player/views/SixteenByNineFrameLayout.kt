@@ -1,12 +1,12 @@
 package com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views
 
 import android.content.Context
+import android.support.annotation.RestrictTo
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import androidx.annotation.RestrictTo
 
 /**
  * A FrameLayout with an aspect ration of 16:9, when the height is set to wrap_content.

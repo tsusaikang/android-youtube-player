@@ -1,7 +1,7 @@
 @file:JvmName("YouTubePlayerUtils")
 package com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils
 
-import androidx.lifecycle.Lifecycle
+import android.arch.lifecycle.Lifecycle
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 
 /**

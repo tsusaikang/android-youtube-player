@@ -2,7 +2,7 @@ package com.pierfrancescosoffritti.androidyoutubeplayer.core.player
 
 import android.os.Handler
 import android.os.Looper
-import androidx.annotation.RestrictTo
+import android.support.annotation.RestrictTo
 
 import android.text.TextUtils
 import android.webkit.JavascriptInterface

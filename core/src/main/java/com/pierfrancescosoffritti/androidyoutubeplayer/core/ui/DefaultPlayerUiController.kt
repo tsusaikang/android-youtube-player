@@ -3,13 +3,13 @@ package com.pierfrancescosoffritti.androidyoutubeplayer.core.ui
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import com.pierfrancescosoffritti.androidyoutubeplayer.R
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
