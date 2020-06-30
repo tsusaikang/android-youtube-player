@@ -2,6 +2,7 @@ package com.pierfrancescosoffritti.androidyoutubeplayer.core.player
 
 import android.os.Handler
 import android.os.Looper
+import android.support.annotation.Nullable
 import android.support.annotation.RestrictTo
 
 import android.text.TextUtils
@@ -148,18 +149,23 @@ class YouTubePlayerBridge(private val youTubePlayerOwner: YouTubePlayerBridgeCal
     }
 
     @JavascriptInterface
-    fun sendVideoLoadedFraction(fraction: String) {
-        val loadedFraction: Float
+    fun sendVideoLoadedFraction(fraction: String?) {
+        val loadedFraction: Float?
         try {
-            loadedFraction = fraction.toFloat()
-        } catch (e: NumberFormatException) {
+            loadedFraction = fraction?.toFloat()
+        } catch (e: Exception) {
             e.printStackTrace()
             return
         }
 
         mainThreadHandler.post {
-            for (listener in youTubePlayerOwner.getListeners())
+            for (listener in youTubePlayerOwner.getListeners()) {
+                if (youTubePlayerOwner.getInstance() == null)
+                    break
+                if (loadedFraction == null)
+                    break
                 listener.onVideoLoadedFraction(youTubePlayerOwner.getInstance(), loadedFraction)
+            }
         }
     }
 
